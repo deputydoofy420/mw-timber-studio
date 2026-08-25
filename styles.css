@@ -655,7 +655,7 @@ footer {
   display: flex; align-items: center; justify-content: center; gap: 10px;
   padding: 14px 20px 20px;
   font-size: 11px; letter-spacing: 0.1em;
-  color: var(--cream-dim); opacity: 0.5;
+  color: var(--cream); opacity: 0.75;
 }
 .site-credit img {
   width: 50px; height: 32px;
