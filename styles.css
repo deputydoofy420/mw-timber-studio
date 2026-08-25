@@ -231,24 +231,23 @@ body.nav-open #nav-toggle i:nth-child(3) { transform: translateY(-7px) rotate(-4
   animation: chIn 0.85s var(--ease-out) forwards;
 }
 .hero-title .line-1 .ch {
-  /* live-edge wood: grain flows left→right across the whole word */
+  /* live-edge wood: bright grain flows left→right across the whole word */
   background:
     repeating-linear-gradient(90deg,
       transparent 0px, transparent 2px,
-      rgba(46, 26, 8, 0.14) 2px, rgba(46, 26, 8, 0.14) 3px),
+      rgba(80, 48, 16, 0.12) 2px, rgba(80, 48, 16, 0.12) 3px),
     linear-gradient(90deg,
-      #2e1a08 0%, #5c3a1e 3%, #8b5e34 8%, #a0704a 15%,
-      #c4956a 22%, #a0704a 30%, #8b5e34 38%, #a0704a 45%,
-      #c4956a 52%, #a0704a 60%, #8b5e34 68%, #a0704a 75%,
-      #c4956a 82%, #8b5e34 88%, #5c3a1e 95%, #2e1a08 100%);
+      #8b5e34 0%, #a0704a 6%, #c4956a 14%, #ddb88a 22%,
+      #c4956a 30%, #a0704a 38%, #ddb88a 46%, #c4956a 54%,
+      #a0704a 62%, #ddb88a 70%, #c4956a 78%, #a0704a 86%,
+      #8b5e34 94%, #6b4226 100%);
   background-size: 200% 100%, 500% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-shadow:
-    -1px 0 2px rgba(30, 18, 8, 0.8),
-     1px 0 2px rgba(30, 18, 8, 0.8),
-     0 3px 12px rgba(0, 0, 0, 0.6);
+    0 0 30px rgba(196, 149, 106, 0.35),
+    0 3px 12px rgba(0, 0, 0, 0.7);
 }
 /* each letter shows a contiguous slice of the grain */
 .hero-title .line-1 .ch:nth-child(1) { background-position: 0% 50%, 0% 50%; }
