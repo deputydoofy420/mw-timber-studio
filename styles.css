@@ -1055,6 +1055,103 @@ body.cart-open #cart-drawer { transform: translateX(0); }
 }
 
 /* ============================================================
+   METALLIC GOLD
+   ============================================================ */
+:root {
+  --gold: #d4a632;
+  --gold-bright: #ffe680;
+  --gold-gradient: linear-gradient(135deg,
+    #3d2b06 0%, #6b4e0e 8%, #b8922a 18%, #d4a632 26%,
+    #ffe680 34%, #fff3c4 38%, #ffe680 42%, #d4a632 50%,
+    #8a6914 58%, #b8922a 66%, #ffe680 74%, #fff3c4 78%,
+    #d4a632 86%, #6b4e0e 94%, #3d2b06 100%);
+}
+
+/* text → metallic gradient */
+.hero-kicker,
+.product-kicker,
+.card-price,
+.cta-inner h2 strong,
+.num,
+.ci-price,
+.price-now,
+.loader-title,
+#cart-total-amt {
+  background: var(--gold-gradient);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: metalShine 3.5s ease-in-out infinite;
+}
+
+/* section titles → metallic gold (override earlier gradient) */
+.section-title em {
+  background: var(--gold-gradient);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: metalShine 3.5s ease-in-out infinite;
+}
+.section:not(.section-dark) .section-title em,
+.section-cta .section-title em {
+  background: var(--gold-gradient);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: metalShine 3.5s ease-in-out infinite;
+}
+
+/* buttons → solid gold */
+.btn-primary { color: var(--gold) !important; }
+.btn-primary:hover { color: var(--gold-bright) !important; }
+.btn-mini { color: var(--gold) !important; border-color: var(--gold) !important; }
+.btn-mini:hover { color: var(--plaid-dark) !important; background: var(--gold) !important; border-color: var(--gold) !important; }
+
+/* button shine sweep → gold tint */
+.btn::before { background: linear-gradient(105deg, transparent, rgba(255, 230, 128, 0.4), transparent); }
+
+/* card hover sheen → gold */
+.card::before { background: linear-gradient(100deg, transparent, rgba(212, 166, 50, 0.12), transparent); }
+.card::after { background: radial-gradient(420px circle at var(--mx) var(--my), rgba(212, 166, 50, 0.16), transparent 45%); }
+
+/* nav → gold underline */
+.nav-links a::after { background: var(--gold); }
+
+/* cart button → gold */
+#cart-btn { border-color: rgba(212, 166, 50, 0.45); color: var(--gold); }
+#cart-btn:hover { background: var(--gold); color: var(--plaid-dark); border-color: var(--gold); }
+.cart-head h2 svg { stroke: var(--gold); }
+
+/* cart drawer borders → gold */
+.cart-head { border-bottom-color: rgba(212, 166, 50, 0.35); }
+.cart-item { border-bottom-color: rgba(212, 166, 50, 0.22); }
+.cart-foot { border-top-color: rgba(212, 166, 50, 0.35); }
+.ci-thumb { border-color: rgba(212, 166, 50, 0.35); }
+.cart-empty svg { stroke: var(--gold); }
+
+/* SVG icons → gold */
+.feature-list svg { stroke: var(--gold); }
+.care-card svg { stroke: var(--gold); }
+.cart-head h2 svg { stroke: var(--gold); }
+.mc-arrow { color: var(--gold); }
+
+/* rings → gold */
+#rings-svg .ring-g ellipse { stroke: var(--gold); }
+
+/* size pills → gold hover */
+.size-pill span:hover { border-color: var(--gold); }
+
+/* toast → gold accent */
+#toast { border-color: rgba(212, 166, 50, 0.45); }
+#toast strong { color: var(--gold); }
+
+/* engrave input → gold focus */
+.engrave-preview input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212, 166, 50, 0.18); }
+
+/* ============================================================
    REDUCED MOTION
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {
