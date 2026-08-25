@@ -651,6 +651,17 @@ footer {
 .foot-brand .brand-logo { width: 20px; height: 20px; }
 .foot-note { opacity: 0.6; }
 
+.site-credit {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 20px 20px;
+  font-size: 11px; letter-spacing: 0.1em;
+  color: var(--cream-dim); opacity: 0.5;
+}
+.site-credit img {
+  width: 50px; height: 32px;
+  border-radius: 4px;
+}
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
