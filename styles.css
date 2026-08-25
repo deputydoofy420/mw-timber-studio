@@ -225,6 +225,16 @@ body.nav-open #nav-toggle i:nth-child(3) { transform: translateY(-7px) rotate(-4
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
+.hero-logo {
+  display: block;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 28px;
+  border: 2px solid rgba(224, 184, 122, 0.45);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), 0 0 50px rgba(224, 184, 122, 0.08);
+}
+
 .hero-title {
   font-size: clamp(58px, 10.5vw, 150px);
   line-height: 0.98;
@@ -664,6 +674,7 @@ footer {
   .nav-links a { font-size: 20px; padding: 12px 20px; }
   nav { z-index: 101; }
   .stats { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .hero-logo { width: 90px; height: 90px; }
   .hero-cta .btn { width: min(320px, 80vw); text-align: center; }
 }
 
