@@ -921,9 +921,16 @@ body.cart-open #cart-drawer { transform: translateX(0); }
 .board-engraved .mono {
   font-family: var(--serif);
   font-size: clamp(56px, 8vw, 96px); letter-spacing: 0.12em;
-  color: rgba(224, 184, 122, 0.9);
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.7), 0 -1px 0 rgba(255, 255, 255, 0.08);
-  transition: letter-spacing 0.5s var(--ease-out);
+  background: linear-gradient(105deg,
+    #7a5e12 0%, #c8a84e 22%, #f5e3a8 38%, #d4b56a 54%, #8a6914 66%, #c8a84e 80%, #f5e3a8 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: metalShine 3s ease-in-out infinite;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+}
+@keyframes metalShine {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
 }
 .board-engraved .mono.bump { animation: monoBump 0.45s var(--ease-out); }
 @keyframes monoBump {

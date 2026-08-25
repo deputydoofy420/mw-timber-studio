@@ -685,7 +685,7 @@
     const mono = document.querySelector(".board-engraved .mono");
     if (engraveInput && mono) {
       engraveInput.addEventListener("input", () => {
-        mono.textContent = (engraveInput.value || "M&W").toUpperCase().slice(0, 14);
+        mono.textContent = (engraveInput.value || "MW").toUpperCase().slice(0, 14);
         mono.classList.remove("bump");
         void mono.offsetWidth;
         mono.classList.add("bump");
