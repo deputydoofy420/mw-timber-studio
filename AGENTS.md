@@ -15,6 +15,10 @@ python3 -m http.server 8420 --directory ~/matts-wood
 ```
 Live at http://localhost:8420 (server may already be running from a previous session).
 
+## Production
+- Live: **https://deputydoofy420.github.io/matts-wood/** (GitHub Pages, public repo `deputydoofy420/matts-wood`, deploys from `main` automatically on push)
+- Deploy = `git push` (remote `origin` already configured; auth via gh/GitHub credentials)
+
 ## Design system
 - Colors: plaid red `#8e1c22`, dark `#23100f`, ink `#171310`, cream `#f2e8d5`, tan `#c89f65`, tan-bright `#e0b87a`
 - Buffalo plaid = layered `repeating-linear-gradient`s (see `.hero-plaid`); tile size var `--tile: 68px`; animate via `plaidDrift` keyframes
