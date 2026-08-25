@@ -23,7 +23,19 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  background: var(--ink);
+  background-color: var(--ink);
+  background-image:
+    repeating-linear-gradient(0deg,
+      rgba(15, 5, 5, 0.68) 0 var(--tile),
+      transparent var(--tile) calc(var(--tile) * 2)),
+    repeating-linear-gradient(90deg,
+      rgba(15, 5, 5, 0.68) 0 var(--tile),
+      transparent var(--tile) calc(var(--tile) * 2)),
+    repeating-linear-gradient(45deg,
+      transparent 0px, transparent 1px,
+      rgba(0, 0, 0, 0.04) 1px, rgba(0, 0, 0, 0.04) 2px);
+  background-size: calc(var(--tile) * 2) calc(var(--tile) * 2), calc(var(--tile) * 2) calc(var(--tile) * 2), 3px 3px;
+  background-attachment: fixed, fixed, fixed;
   color: var(--cream);
   overflow-x: hidden;
   line-height: 1.6;
@@ -40,7 +52,7 @@ h1, h2, h3 { font-family: var(--serif);
 
 .container { width: min(1120px, 92%); margin-inline: auto; }
 
-.section { padding: clamp(80px, 12vw, 140px) 0; position: relative; }
+.section { padding: clamp(80px, 12vw, 140px) 0; position: relative; background: rgba(23, 19, 16, 0.88); }
 
 /* ============================================================
    PRELOADER
@@ -166,9 +178,16 @@ body.nav-open #nav-toggle i:nth-child(3) { transform: translateY(-7px) rotate(-4
   position: absolute; inset: -140px; z-index: -2;
   background-color: var(--plaid-red);
   background-image:
-    repeating-linear-gradient(0deg,  rgba(24, 9, 9, 0.62) 0 var(--tile), transparent var(--tile) calc(var(--tile) * 2)),
-    repeating-linear-gradient(90deg, rgba(24, 9, 9, 0.62) 0 var(--tile), transparent var(--tile) calc(var(--tile) * 2));
-  background-size: calc(var(--tile) * 2) calc(var(--tile) * 2);
+    repeating-linear-gradient(0deg,
+      rgba(15, 5, 5, 0.72) 0 var(--tile),
+      transparent var(--tile) calc(var(--tile) * 2)),
+    repeating-linear-gradient(90deg,
+      rgba(15, 5, 5, 0.72) 0 var(--tile),
+      transparent var(--tile) calc(var(--tile) * 2)),
+    repeating-linear-gradient(45deg,
+      transparent 0px, transparent 1px,
+      rgba(0, 0, 0, 0.05) 1px, rgba(0, 0, 0, 0.05) 2px);
+  background-size: calc(var(--tile) * 2) calc(var(--tile) * 2), calc(var(--tile) * 2) calc(var(--tile) * 2), 3px 3px;
   animation: plaidDrift 26s linear infinite;
 }
 @keyframes plaidDrift {
@@ -205,12 +224,32 @@ body.nav-open #nav-toggle i:nth-child(3) { transform: translateY(-7px) rotate(-4
   animation: chIn 0.85s var(--ease-out) forwards;
 }
 .hero-title .line-1 .ch {
-  background: linear-gradient(180deg,
-    #a0704a 0%, #8b5e34 20%, #6b4226 40%, #5c3a1e 60%, #8b5e34 80%, #a0704a 100%);
+  /* live-edge wood: grain flows left→right across the whole word */
+  background:
+    repeating-linear-gradient(90deg,
+      transparent 0px, transparent 2px,
+      rgba(46, 26, 8, 0.14) 2px, rgba(46, 26, 8, 0.14) 3px),
+    linear-gradient(90deg,
+      #2e1a08 0%, #5c3a1e 3%, #8b5e34 8%, #a0704a 15%,
+      #c4956a 22%, #a0704a 30%, #8b5e34 38%, #a0704a 45%,
+      #c4956a 52%, #a0704a 60%, #8b5e34 68%, #a0704a 75%,
+      #c4956a 82%, #8b5e34 88%, #5c3a1e 95%, #2e1a08 100%);
+  background-size: 200% 100%, 500% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  text-shadow:
+    -1px 0 2px rgba(30, 18, 8, 0.8),
+     1px 0 2px rgba(30, 18, 8, 0.8),
+     0 3px 12px rgba(0, 0, 0, 0.6);
 }
+/* each letter shows a contiguous slice of the grain */
+.hero-title .line-1 .ch:nth-child(1) { background-position: 0% 50%, 0% 50%; }
+.hero-title .line-1 .ch:nth-child(2) { background-position: 0% 50%, 20% 50%; }
+.hero-title .line-1 .ch:nth-child(3) { background-position: 0% 50%, 40% 50%; }
+.hero-title .line-1 .ch:nth-child(4) { background-position: 0% 50%, 60% 50%; }
+.hero-title .line-1 .ch:nth-child(5) { background-position: 0% 50%, 80% 50%; }
+.hero-title .line-1 .ch:nth-child(6) { background-position: 0% 50%, 100% 50%; }
 .hero-title .line-2 .ch {
   animation: chIn 1s var(--ease-out) forwards, metalShine 3.5s ease-in-out infinite;
 }
@@ -430,7 +469,7 @@ body.nav-open #nav-toggle i:nth-child(3) { transform: translateY(-7px) rotate(-4
 .section-dark {
   background:
     radial-gradient(900px circle at 15% 20%, rgba(142, 28, 34, 0.16), transparent 55%),
-    var(--bark);
+    rgba(42, 31, 22, 0.92);
 }
 .split {
   display: grid; grid-template-columns: minmax(300px, 460px) 1fr;
@@ -541,9 +580,16 @@ body.nav-open #nav-toggle i:nth-child(3) { transform: translateY(-7px) rotate(-4
   position: absolute; inset: -80px; z-index: 0;
   background-color: var(--plaid-red);
   background-image:
-    repeating-linear-gradient(0deg,  rgba(24, 9, 9, 0.62) 0 var(--tile), transparent var(--tile) calc(var(--tile) * 2)),
-    repeating-linear-gradient(90deg, rgba(24, 9, 9, 0.62) 0 var(--tile), transparent var(--tile) calc(var(--tile) * 2));
-  background-size: calc(var(--tile) * 2) calc(var(--tile) * 2);
+    repeating-linear-gradient(0deg,
+      rgba(15, 5, 5, 0.72) 0 var(--tile),
+      transparent var(--tile) calc(var(--tile) * 2)),
+    repeating-linear-gradient(90deg,
+      rgba(15, 5, 5, 0.72) 0 var(--tile),
+      transparent var(--tile) calc(var(--tile) * 2)),
+    repeating-linear-gradient(45deg,
+      transparent 0px, transparent 1px,
+      rgba(0, 0, 0, 0.05) 1px, rgba(0, 0, 0, 0.05) 2px);
+  background-size: calc(var(--tile) * 2) calc(var(--tile) * 2), calc(var(--tile) * 2) calc(var(--tile) * 2), 3px 3px;
   animation: plaidDrift 32s linear infinite reverse;
 }
 .cta-inner { position: relative; z-index: 1; text-align: center; padding: 40px 0; }
