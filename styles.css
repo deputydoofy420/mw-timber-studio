@@ -917,16 +917,41 @@ body.cart-open #cart-drawer { transform: translateX(0); }
   width: min(420px, 84%); aspect-ratio: 1.55 / 1;
   background: linear-gradient(160deg, #3f2a15, #241408);
   display: grid; place-items: center;
+  border: 1px solid rgba(180, 146, 42, 0.4);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55),
+              0 0 40px rgba(180, 146, 42, 0.1),
+              inset 0 0 0 1px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.6s ease;
+}
+.board-stage:hover .board-engraved {
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6),
+              0 0 60px rgba(180, 146, 42, 0.15),
+              inset 0 0 0 1px rgba(0, 0, 0, 0.3);
 }
 .board-engraved .mono {
   font-family: var(--serif);
   font-size: clamp(56px, 8vw, 96px); letter-spacing: 0.12em;
-  background: linear-gradient(105deg,
-    #7a5e12 0%, #c8a84e 22%, #f5e3a8 38%, #d4b56a 54%, #8a6914 66%, #c8a84e 80%, #f5e3a8 100%);
+  background: linear-gradient(135deg,
+    #3d2b06 0%,
+    #6b4e0e 8%,
+    #b8922a 18%,
+    #d4a632 26%,
+    #ffe680 34%,
+    #fff3c4 38%,
+    #ffe680 42%,
+    #d4a632 50%,
+    #8a6914 58%,
+    #b8922a 66%,
+    #ffe680 74%,
+    #fff3c4 78%,
+    #d4a632 86%,
+    #6b4e0e 94%,
+    #3d2b06 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text; background-clip: text; color: transparent;
-  animation: metalShine 3s ease-in-out infinite;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+  animation: metalShine 3.5s ease-in-out infinite;
+  filter: drop-shadow(0 2px 6px rgba(180, 146, 42, 0.6))
+          drop-shadow(0 0 20px rgba(180, 146, 42, 0.25));
 }
 @keyframes metalShine {
   0%   { background-position: 0% 50%; }
