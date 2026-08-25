@@ -134,5 +134,5 @@ Live at http://localhost:8420
 ### Site credit added
 - **Credit:** "Site made by BrianKaley aka deputy-doofy aka doofus inc."
 - **Logo:** `img/doofy.gif` (Officer Doofy salute GIF from gifdb.com, 790x500, displayed at 50x32)
-- **Placement:** Below footer on all 5 pages, `.site-credit` div, centered, muted opacity (0.5)
-- **CSS:** `.site-credit` — flex center, 11px letterspaced text, small rounded GIF thumbnail
+- **Placement:** Below footer on all 5 pages, `.site-credit` div, centered, opacity 0.75
+- **CSS:** `.site-credit` — flex center, 11px letterspaced cream text, opacity 0.75, small rounded GIF thumbnail
