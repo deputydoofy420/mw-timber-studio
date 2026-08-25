@@ -53,6 +53,7 @@ Live at http://localhost:8420 (server may already be running from a previous ses
 - All product photos processed to 900px height, JPEG q82, ~150KB each
 - Logo = `img/logo.jpg`, also used in hero section above TIMBER/STUDIO heading
 - Collage = `img/studio.jpg`, used in "Our Rings" story section
+- Credit logo = `img/doofy.gif` (Officer Doofy), used in `.site-credit` below footer on all pages
 - Engraved page keeps its interactive CSS monogram preview (the configurator)
 
 ## Ideas / not done yet

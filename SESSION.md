@@ -33,6 +33,7 @@ High-end handmade cutting board e-commerce website. Static HTML/CSS/JS, no build
 └── img/
     ├── logo.jpg            # MW Timber Studio medallion (512x512, user-cropped)
     ├── studio.jpg          # Brand collage (1350x900) — logo, cards, boards
+    ├── doofy.gif           # Site credit logo (Officer Doofy salute, 790x500)
     ├── end-grain.jpg       # ~150KB, 900px tall
     ├── edge-grain.jpg
     ├── serving.jpg
@@ -129,3 +130,9 @@ Live at http://localhost:8420
 - IMG_2599 is an alternate logo medallion take (slightly different angle) — available if a variant is needed
 - The `brand-chip` CSS class is still in styles.css (not used in HTML anymore) — can be cleaned up
 - Consider: real checkout backend, testimonials section (both listed in AGENTS.md as "not done yet")
+
+### Site credit added
+- **Credit:** "Site made by BrianKaley aka deputy-doofy aka doofus inc."
+- **Logo:** `img/doofy.gif` (Officer Doofy salute GIF from gifdb.com, 790x500, displayed at 50x32)
+- **Placement:** Below footer on all 5 pages, `.site-credit` div, centered, muted opacity (0.5)
+- **CSS:** `.site-credit` — flex center, 11px letterspaced text, small rounded GIF thumbnail
