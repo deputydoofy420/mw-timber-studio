@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>End-Grain Classics — Matt's Wood</title>
+<meta name="description" content="Handmade end-grain cutting boards in walnut, cherry and maple. Kind to knife edges, built tough, plaid deep." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%238e1c22'/%3E%3Crect y='0' width='32' height='8' fill='%23231010'/%3E%3Crect y='16' width='32' height='8' fill='%23231010'/%3E%3Crect x='0' width='8' height='32' fill='%23231010' opacity='.85'/%3E%3Crect x='16' width='8' height='32' fill='%23231010' opacity='.85'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-loading">
+
+<div id="loader" aria-hidden="true">
+  <div class="loader-bars"><span></span><span></span><span></span><span></span></div>
+  <p class="loader-title">MATT'S WOOD</p>
+</div>
+<canvas id="sawdust" aria-hidden="true"></canvas>
+
+<nav id="nav">
+  <a class="brand" href="index.html">
+    <span class="brand-chip"></span>
+    <span>MATT'S&nbsp;WOOD</span>
+  </a>
+  <button id="nav-toggle" type="button" aria-label="Toggle menu"><i></i><i></i><i></i></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#wood" class="active">The Boards</a></li>
+    <li><a href="index.html#rings">Our Rings</a></li>
+    <li><a href="index.html#gallery">Species</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main class="product-page" data-product="end-grain">
+  <div class="container">
+    <a class="crumb" href="index.html#wood">← Back to the stack</a>
+
+    <div class="product-hero">
+      <div class="board-stage reveal left" aria-hidden="true">
+        <div class="board board-endgrain"></div>
+      </div>
+
+      <div class="product-info">
+        <p class="product-kicker reveal">THE HEADCUTTER · WALNUT / CHERRY / MAPLE</p>
+        <h1 class="reveal">End-Grain<br/>Classics</h1>
+        <p class="product-blurb reveal" data-delay="100">Blocks sliced end-up so knives slip between the fibers instead of through them — every cut heals shut and every edge stays sharper, longer. Glued up checkerboard-style, one strip at a time.</p>
+
+        <fieldset class="size-pills reveal" data-delay="150" style="border:0">
+          <legend class="opt-label">Pick your size</legend>
+          <label class="size-pill"><input type="radio" name="size" value="0" checked /><span>Small · 12×9" — $85</span></label>
+          <label class="size-pill"><input type="radio" name="size" value="1" /><span>Medium · 16×12" — $110</span></label>
+          <label class="size-pill"><input type="radio" name="size" value="2" /><span>Large · 18×14" — $145</span></label>
+        </fieldset>
+
+        <div class="buy-row reveal" data-delay="200">
+          <div class="qty">
+            <button type="button" data-step="-1" aria-label="One less">−</button>
+            <output>1</output>
+            <button type="button" data-step="1" aria-label="One more">+</button>
+          </div>
+          <span class="price-now">$85</span>
+          <button class="btn btn-primary" type="button" data-add="end-grain">Add to stash</button>
+        </div>
+
+        <ul class="feature-list reveal" data-delay="250">
+          <li><svg viewBox="0 0 24 24"><title>Knife friendly</title><path d="M3 21 l6-6 M9 15 L20 4 c1 3-1 7-5 9 z"/></svg>End-grain face keeps edges sharp ~2× longer than flat boards</li>
+          <li><svg viewBox="0 0 24 24"><title>Mixed species</title><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/></svg>Walnut, cherry and maple mixed by hand — no two alike</li>
+          <li><svg viewBox="0 0 24 24"><title>Food safe finish</title><path d="M12 3 c4 5 7 8 7 12 a7 7 0 0 1 -14 0 c0-4 3-7 7-12 z"/></svg>Food-safe mineral oil &amp; beeswax conditioning, ready to use</li>
+          <li><svg viewBox="0 0 24 24"><title>Rubber feet</title><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/><rect x="4" y="4" width="16" height="10" rx="2"/></svg>Stainless rubber feet lift the board and save your counter</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="care-strip">
+      <h2 class="section-title reveal"><em>Keep It Fed</em><span class="rule"></span></h2>
+      <div class="care-grid grid-stagger">
+        <div class="care-card reveal">
+          <svg viewBox="0 0 24 24"><title>Oil monthly</title><path d="M12 3 c4 5 7 8 7 12 a7 7 0 0 1 -14 0 c0-4 3-7 7-12 z"/></svg>
+          <h3>Oil it monthly</h3>
+          <p>Any food-safe mineral oil. Flood it, let it drink for 20 minutes, wipe dry. Thirsty boards crack; fed boards last decades.</p>
+        </div>
+        <div class="care-card reveal">
+          <svg viewBox="0 0 24 24"><title>Hand wash only</title><path d="M4 12 h16 M4 12 a8 8 0 0 1 16 0 v6 a2 2 0 0 1 -2 2 H6 a2 2 0 0 1 -2 -2 z"/></svg>
+          <h3>Never the dishwasher</h3>
+          <p>Quick rinse, towel dry, stand it on edge. Soaking and dishwashers are how good boards go to an early grave.</p>
+        </div>
+        <div class="care-card reveal">
+          <svg viewBox="0 0 24 24"><title>Refresh yearly</title><path d="M3 17 L17 3 l4 4 L7 21 H3 z M14 6 l4 4"/></svg>
+          <h3>Sand &amp; refresh yearly</h3>
+          <p>A pass of 220-grit and a fresh coat of board butter erases a year of dinner parties. Ten minutes, tops.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="related">
+      <h2>Pairs well with…</h2>
+      <div class="mini-cards grid-stagger">
+        <a class="mini-card reveal" href="edge-grain.html" style="--tone: linear-gradient(160deg,#7e3b2a,#c49f66)">
+          <span class="mc-art"></span>
+          <h3>Edge-Grain Everyday</h3>
+          <small>from $45</small><br/>
+          <span class="mc-arrow">→</span>
+        </a>
+        <a class="mini-card reveal" href="serving-boards.html" style="--tone: radial-gradient(circle at 30% 120%, #9a7443, #57241a)">
+          <span class="mc-art"></span>
+          <h3>Serving &amp; Cheese</h3>
+          <small>from $55</small><br/>
+          <span class="mc-arrow">→</span>
+        </a>
+        <a class="mini-card reveal" href="custom-engraved.html" style="--tone: linear-gradient(160deg,#3a2412,#241408)">
+          <span class="mc-art"></span>
+          <h3>Custom Engraved</h3>
+          <small>from $65</small><br/>
+          <span class="mc-arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <span class="foot-brand"><span class="brand-chip"></span> MATT'S WOOD</span>
+  <span>© 2026 Matt's Wood · Workshop Rd, Nowhere in particular</span>
+  <span class="foot-note">No flannel was harmed making this site.</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
