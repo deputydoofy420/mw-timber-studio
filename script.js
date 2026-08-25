@@ -12,33 +12,33 @@
     "end-grain": {
       name: "End-Grain Classics",
       sizes: [
-        { label: 'Small · 12×9"', price: 85 },
-        { label: 'Medium · 16×12"', price: 110 },
-        { label: 'Large · 18×14"', price: 145 },
+        { label: 'Small · 12×9"', price: 140 },
+        { label: 'Medium · 16×12"', price: 185 },
+        { label: 'Large · 18×14"', price: 240 },
       ],
     },
     "edge-grain": {
       name: "Edge-Grain Everyday",
       sizes: [
-        { label: 'Compact · 12×8"', price: 45 },
-        { label: 'Classic · 15×10"', price: 60 },
-        { label: 'XL · 18×12"', price: 78 },
+        { label: 'Compact · 12×8"', price: 75 },
+        { label: 'Classic · 15×10"', price: 98 },
+        { label: 'XL · 18×12"', price: 125 },
       ],
     },
     serving: {
       name: "Serving & Cheese Boards",
       sizes: [
-        { label: 'Paddle · 16×7"', price: 55 },
-        { label: 'Rectangle · 14×10"', price: 70 },
-        { label: "Live-edge · varies", price: 95 },
+        { label: 'Paddle · 16×7"', price: 95 },
+        { label: 'Rectangle · 14×10"', price: 128 },
+        { label: "Live-edge · varies", price: 175 },
       ],
     },
     engraved: {
       name: "Custom Engraved",
       sizes: [
-        { label: "One line of text", price: 65 },
-        { label: "Monogram + border", price: 85 },
-        { label: "Full logo / design", price: 120 },
+        { label: "One line of text", price: 115 },
+        { label: "Monogram + border", price: 150 },
+        { label: "Full logo / design", price: 195 },
       ],
     },
   };

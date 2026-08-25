@@ -22,7 +22,8 @@ Live at http://localhost:8420 (server may already be running from a previous ses
 ## Design system
 - Colors: plaid red `#8e1c22`, dark `#23100f`, ink `#171310`, cream `#f2e8d5`, tan `#c89f65`, tan-bright `#e0b87a`
 - Buffalo plaid = layered `repeating-linear-gradient`s (see `.hero-plaid`); tile size var `--tile: 68px`; animate via `plaidDrift` keyframes
-- Fonts: Bebas Neue (headings), Inter (body) via Google Fonts with solid fallbacks
+- Fonts: **Playfair Display** (headings, italic gold-gradient accents) + Inter (body, letterspaced uppercase kickers) via Google Fonts
+- High-end/artisanal tone — flashy but NOT futuristic; no people/lumberjack imagery
 - Icons: inline SVG, stroke-based (`stroke: tan-bright`), each needs a `<title>` (linter requires it)
 
 ## Features implemented
@@ -34,11 +35,15 @@ Live at http://localhost:8420 (server may already be running from a previous ses
 - **Cart**: localStorage (`mw-timber-cart-v1`), drawer UI injected via JS (no per-page markup), qty/remove, mailto checkout, toast + fly-to-cart chip animation
 - Product pages: CSS-art board visuals (`.board-*` variants), size pills w/ live price flip, qty stepper, live engraving preview on custom-engraved.html
 
-## Products (cutting boards only) — ids in script.js `PRODUCTS`
-1. End-Grain Classics — `end-grain` — from $85 → end-grain.html
-2. Edge-Grain Everyday — `edge-grain` — from $45 → edge-grain.html
-3. Serving & Cheese Boards — `serving` — from $55 → serving-boards.html
-4. Custom Engraved — `engraved` — from $65 → custom-engraved.html
+## Products (cutting boards only) — ids in script.js `PRODUCTS`; nothing priced under $75
+1. End-Grain Classics — `end-grain` — from $140 → end-grain.html
+2. Edge-Grain Everyday — `edge-grain` — from $75 → edge-grain.html
+3. Serving & Cheese Boards — `serving` — from $95 → serving-boards.html
+4. Custom Engraved — `engraved` — from $115 → custom-engraved.html
+
+## Content rules
+- Species wall shows 6: walnut, oak, cherry, maple, fir, ash (NO cedar, NO poplar)
+- Never mention sanding/grit — care copy uses oil + board-butter buffing only
 
 ## Ideas / not done yet
 - Real photos of boards (currently all CSS/SVG art)
