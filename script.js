@@ -1,5 +1,5 @@
 /* ============================================================
-   MATT'S WOOD — interactions
+   MW TIMBER STUDIO — interactions
    ============================================================ */
 (() => {
   "use strict";
@@ -424,7 +424,7 @@
   /* ============================================================
      CART — state, UI injection, rendering
      ============================================================ */
-  const STORE_KEY = "mattswood-cart-v1";
+  const STORE_KEY = "mw-timber-cart-v1";
   const loadCart = () => {
     try {
       const raw = JSON.parse(localStorage.getItem(STORE_KEY));
@@ -574,7 +574,7 @@
   checkoutBtn.addEventListener("click", () => {
     if (!cart.length) return;
     const lines = [
-      "Howdy Matt — I'd like to order:",
+      "Howdy — I'd like to order:",
       "",
       ...cart.map((i) => `• ${PRODUCTS[i.id].name} — ${i.sizeLabel} × ${i.qty} (${money(i.price * i.qty)})`),
       "",
@@ -584,7 +584,7 @@
       "Shipping address:",
     ];
     const url =
-      `mailto:matt@mattswood.example` +
+      `mailto:hello@mwtimberstudio.example` +
       `?subject=${encodeURIComponent(`Board order — ${itemCount()} item(s)`)}` +
       `&body=${encodeURIComponent(lines.join("\n"))}`;
     window.location.href = url;

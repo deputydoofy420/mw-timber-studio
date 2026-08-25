@@ -1,6 +1,6 @@
-# Matt's Wood — Project Notes
+# MW Timber Studio — Project Notes
 
-Handmade **cutting board** shop site (NOT a lumber company). Plaid/lumberjack *aesthetic* theme, but strictly **no lumberjacks and no people imagery** anywhere — only plaid patterns, wood grain, trees, tools-as-decor.
+Handmade **cutting board** shop site (NOT a lumber company). Formerly "Matt's Wood". Plaid/lumberjack *aesthetic* theme, but strictly **no lumberjacks and no people imagery** anywhere — only plaid patterns, wood grain, trees, tools-as-decor.
 
 ## Stack
 Plain static site — no build step, no dependencies.
@@ -16,7 +16,7 @@ python3 -m http.server 8420 --directory ~/matts-wood
 Live at http://localhost:8420 (server may already be running from a previous session).
 
 ## Production
-- Live: **https://deputydoofy420.github.io/matts-wood/** (GitHub Pages, public repo `deputydoofy420/matts-wood`, deploys from `main` automatically on push)
+- Live: **https://deputydoofy420.github.io/mw-timber-studio/** (GitHub Pages, public repo `deputydoofy420/mw-timber-studio`, deploys from `main` automatically on push)
 - Deploy = `git push` (remote `origin` already configured; auth via gh/GitHub credentials)
 
 ## Design system
@@ -31,7 +31,7 @@ Live at http://localhost:8420 (server may already be running from a previous ses
 - 3D tilt product cards w/ cursor glow + grain sweep, self-drawing tree-rings SVG, spinning saw blade
 - Count-up stats, clip-path species swatch wall, mobile nav, reduced-motion support
 - Letter-staggered section titles, scroll progress ruler, magnetic CTAs, cross-document view transitions (JS fade fallback)
-- **Cart**: localStorage (`mattswood-cart-v1`), drawer UI injected via JS (no per-page markup), qty/remove, mailto checkout, toast + fly-to-cart chip animation
+- **Cart**: localStorage (`mw-timber-cart-v1`), drawer UI injected via JS (no per-page markup), qty/remove, mailto checkout, toast + fly-to-cart chip animation
 - Product pages: CSS-art board visuals (`.board-*` variants), size pills w/ live price flip, qty stepper, live engraving preview on custom-engraved.html
 
 ## Products (cutting boards only) — ids in script.js `PRODUCTS`
