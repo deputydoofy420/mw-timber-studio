@@ -52,6 +52,5 @@ Live at http://localhost:8420 (server may already be running from a previous ses
 - Engraved page keeps its interactive CSS monogram preview (the configurator)
 
 ## Ideas / not done yet
-- Real photos of boards (currently all CSS/SVG art)
 - Real checkout backend (currently mailto order summary)
 - Testimonials section

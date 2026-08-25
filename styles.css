@@ -204,11 +204,23 @@ body.nav-open #nav-toggle i:nth-child(3) { transform: translateY(-7px) rotate(-4
   opacity: 0;
   animation: chIn 0.85s var(--ease-out) forwards;
 }
-.hero-title .line-2 .ch { animation-duration: 1s; }
+.hero-title .line-1 .ch {
+  background: linear-gradient(180deg,
+    #a0704a 0%, #8b5e34 20%, #6b4226 40%, #5c3a1e 60%, #8b5e34 80%, #a0704a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-title .line-2 .ch {
+  animation: chIn 1s var(--ease-out) forwards, metalShine 3.5s ease-in-out infinite;
+}
 .hero-title .outline {
   font-style: italic;
-  background: linear-gradient(105deg, var(--tan-bright) 15%, #f4e3bb 50%, var(--tan-bright) 85%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
+  background: var(--gold-gradient);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 @keyframes chIn { to { transform: none; opacity: 1; } }
 
