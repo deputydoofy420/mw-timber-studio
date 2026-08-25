@@ -396,20 +396,12 @@ body.nav-open #nav-toggle i:nth-child(3) { transform: translateY(-7px) rotate(-4
 }
 .card:hover::after { opacity: 1; }
 
-.card-icon {
-  width: 74px; height: 74px; border-radius: 50%;
-  background: radial-gradient(circle at 32% 28%, #3d2c1d, #241a11);
-  border: 1px solid rgba(200, 159, 101, 0.35);
-  display: grid; place-items: center;
-  margin-bottom: 22px;
-  transition: transform 0.6s var(--ease-out);
+.card-photo {
+  display: block; width: calc(100% + 60px); margin: -38px -30px 26px;
+  aspect-ratio: 16 / 10; object-fit: cover;
+  transition: transform 0.6s var(--ease-out), filter 0.4s ease;
 }
-.card-icon svg {
-  width: 44px; height: 44px;
-  fill: none; stroke: var(--tan-bright); stroke-width: 2.4;
-  stroke-linecap: round; stroke-linejoin: round;
-}
-.card:hover .card-icon { transform: rotate(-8deg) scale(1.12); }
+.card:hover .card-photo { transform: scale(1.05); filter: brightness(1.07); }
 
 .card h3 { font-size: 26px; margin-bottom: 10px; color: var(--cream); }
 .card p { font-size: 14.5px; color: var(--cream-dim); line-height: 1.7; }
@@ -861,8 +853,43 @@ body.cart-open #cart-drawer { transform: translateX(0); }
   display: grid; place-items: center;
   min-height: 440px;
 }
-.board {
-  position: relative; border-radius: 16px;
+
+/* real product photography */
+.photo-stage { margin: 0; }
+.photo-stage img {
+  display: block; width: 100%; max-width: 460px;
+  border-radius: 16px;
+  border: 1px solid rgba(224, 184, 122, 0.35);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(0, 0, 0, 0.3);
+  animation: boardFloat 6.5s ease-in-out infinite;
+  transform-style: preserve-3d;
+  transition: transform 0.7s var(--ease-out), box-shadow 0.5s ease;
+}
+.photo-stage:hover img {
+  transform: rotateX(4deg) rotateY(-6deg) scale(1.02);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(224, 184, 122, 0.08);
+}
+.board-stage .photo-stage { width: 100%; display: grid; place-items: center; }
+
+/* secondary gallery strip */
+.strip-label {
+  margin-top: clamp(50px, 7vw, 80px);
+  text-align: center;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--tan);
+}
+.photo-strip {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+  margin-top: 20px;
+}
+.photo-strip figure { margin: 0; overflow: hidden; border-radius: 14px; border: 1px solid rgba(200, 159, 101, 0.3); }
+.photo-strip img {
+  display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+  transition: transform 0.6s var(--ease-out), filter 0.4s ease;
+}
+.photo-strip figure:hover img { transform: scale(1.05); filter: brightness(1.06); }
+
+.board { position: relative; border-radius: 16px;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55), inset 0 0 0 2px rgba(0, 0, 0, 0.3);
   animation: boardFloat 6.5s ease-in-out infinite;
   transform-style: preserve-3d;
@@ -886,35 +913,6 @@ body.cart-open #cart-drawer { transform: translateX(0); }
     repeating-linear-gradient(88deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 19px);
 }
 
-.board-endgrain {
-  width: min(400px, 82%); aspect-ratio: 1.12 / 1;
-  background-image:
-    conic-gradient(#4a3018 90deg, #caa36a 90deg 180deg, #4a3018 180deg 270deg, #caa36a 270deg);
-  background-size: 25% 25%;
-}
-.board-edgegrain {
-  width: min(480px, 88%); aspect-ratio: 1.75 / 1;
-  background-image:
-    repeating-linear-gradient(90deg,
-      #46301a 0 52px, #33210f 52px 58px,
-      #7e3b2a 58px 108px, #5d291d 108px 114px,
-      #c49f66 114px 164px, #97744a 164px 170px);
-}
-.board-paddle {
-  width: min(280px, 62%); aspect-ratio: 0.72 / 1; border-radius: 22px 22px 26px 26px;
-  background: linear-gradient(160deg, #c49f66, #97744a);
-  rotate: 5deg;
-}
-.board-paddle::after { /* handle hole */
-  content: ""; position: absolute; top: 26px; left: 50%; translate: -50%;
-  width: 26px; height: 26px; border-radius: 50%;
-  background: var(--ink); box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 0.18);
-}
-.board-paddle i { /* juice groove */
-  content: ""; position: absolute; inset: 68px 20px 22px; border-radius: 14px;
-  border: 2px dashed rgba(0, 0, 0, 0.28);
-  display: block;
-}
 .board-engraved {
   width: min(420px, 84%); aspect-ratio: 1.55 / 1;
   background: linear-gradient(160deg, #3f2a15, #241408);
@@ -1020,6 +1018,8 @@ body.cart-open #cart-drawer { transform: translateX(0); }
 @media (max-width: 900px) {
   .product-hero { grid-template-columns: 1fr; }
   .board-stage { min-height: 360px; order: -1; }
+  .photo-strip { grid-template-columns: 1fr 1fr; }
+  .photo-strip figure:last-child { grid-column: 1 / -1; }
 }
 
 /* ============================================================

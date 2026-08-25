@@ -29,11 +29,12 @@ Live at http://localhost:8420 (server may already be running from a previous ses
 ## Features implemented
 - Preloader (plaid bars), sawdust particle canvas (+ click bursts), animated plaid hero + letter-by-letter title
 - Parallax hero w/ layered treelines, plaid rotates on scroll, marquee ticker, scroll reveals (IntersectionObserver)
-- 3D tilt product cards w/ cursor glow + grain sweep, self-drawing tree-rings SVG, spinning saw blade
+- 3D tilt product cards w/ real photography + grain sweep, self-drawing tree-rings SVG, spinning saw blade
 - Count-up stats, clip-path species swatch wall, mobile nav, reduced-motion support
 - Letter-staggered section titles, scroll progress ruler, magnetic CTAs, cross-document view transitions (JS fade fallback)
 - **Cart**: localStorage (`mw-timber-cart-v1`), drawer UI injected via JS (no per-page markup), qty/remove, mailto checkout, toast + fly-to-cart chip animation
-- Product pages: CSS-art board visuals (`.board-*` variants), size pills w/ live price flip, qty stepper, live engraving preview on custom-engraved.html
+- Product pages: real product photos in `img/` (via ImageMagick, 900px tall, ~150KB each), size pills w/ live price flip, qty stepper, live engraving preview on custom-engraved.html
+- Index cards feature real product photography (no more SVG icons)
 
 ## Products (cutting boards only) — ids in script.js `PRODUCTS`; nothing priced under $75
 1. End-Grain Classics — `end-grain` — from $140 → end-grain.html
@@ -41,9 +42,14 @@ Live at http://localhost:8420 (server may already be running from a previous ses
 3. Serving & Cheese Boards — `serving` — from $95 → serving-boards.html
 4. Custom Engraved — `engraved` — from $115 → custom-engraved.html
 
-## Content rules
-- Species wall shows 6: walnut, oak, cherry, maple, fir, ash (NO cedar, NO poplar)
-- Never mention sanding/grit — care copy uses oil + board-butter buffing only
+## Photos
+- `img/end-grain.jpg` — checkerboard board in oak and maple
+- `img/edge-grain.jpg` — fine-striped edge-grain (walnut/maple)
+- `img/serving.jpg` — carving shot (roast on board)
+- `img/workshop.jpg` — three boards on bench
+- `img/kitchen.jpg` — board on kitchen counter
+- All processed to 900px height, JPEG q82, ~150KB each
+- Engraved page keeps its interactive CSS monogram preview (the configurator)
 
 ## Ideas / not done yet
 - Real photos of boards (currently all CSS/SVG art)
