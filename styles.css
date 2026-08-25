@@ -142,6 +142,15 @@ nav.scrolled {
 }
 .brand:hover .brand-chip { transform: rotate(90deg) scale(1.08); }
 
+.brand-logo {
+  width: 26px; height: 26px; border-radius: 50%; flex: none;
+  object-fit: cover;
+  border: 1px solid rgba(224, 184, 122, 0.35);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s var(--ease-out);
+}
+.brand:hover .brand-logo { transform: rotate(90deg) scale(1.08); }
+
 .nav-links {
   display: flex; gap: 6px; list-style: none;
 }
@@ -629,6 +638,7 @@ footer {
   color: var(--cream); font-size: 16px;
 }
 .foot-brand .brand-chip { width: 20px; height: 20px; }
+.foot-brand .brand-logo { width: 20px; height: 20px; }
 .foot-note { opacity: 0.6; }
 
 /* ============================================================
@@ -940,6 +950,20 @@ body.cart-open #cart-drawer { transform: translateX(0); }
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(224, 184, 122, 0.08);
 }
 .board-stage .photo-stage { width: 100%; display: grid; place-items: center; }
+
+/* brand collage (rings section) */
+.brand-photo { margin: 28px 0 0; }
+.brand-photo img {
+  display: block; width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(224, 184, 122, 0.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+.brand-photo figcaption {
+  margin-top: 10px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--tan); text-align: center;
+}
 
 /* secondary gallery strip */
 .strip-label {
