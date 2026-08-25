@@ -43,12 +43,16 @@ Live at http://localhost:8420 (server may already be running from a previous ses
 4. Custom Engraved — `engraved` — from $115 → custom-engraved.html
 
 ## Photos
+- `img/logo.jpg` — MW Timber Studio medallion (512x512, circular brand mark, user-cropped)
+- `img/studio.jpg` — Brand collage: logo on walnut, business card, engraved board, end-grain boards (1350x900)
 - `img/end-grain.jpg` — checkerboard board in oak and maple
 - `img/edge-grain.jpg` — fine-striped edge-grain (walnut/maple)
 - `img/serving.jpg` — carving shot (roast on board)
 - `img/workshop.jpg` — three boards on bench
 - `img/kitchen.jpg` — board on kitchen counter
-- All processed to 900px height, JPEG q82, ~150KB each
+- All product photos processed to 900px height, JPEG q82, ~150KB each
+- Logo = `img/logo.jpg`, also used in hero section above TIMBER/STUDIO heading
+- Collage = `img/studio.jpg`, used in "Our Rings" story section
 - Engraved page keeps its interactive CSS monogram preview (the configurator)
 
 ## Ideas / not done yet

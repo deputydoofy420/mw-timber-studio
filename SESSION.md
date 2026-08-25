@@ -14,7 +14,7 @@ High-end handmade cutting board e-commerce website. Static HTML/CSS/JS, no build
 - **Voice:** First person ("I started making...")
 - **Tone:** High-end/artisanal, flashy polished, NOT futuristic
 - **Hero:** "TIMBER" (wood grain) / "STUDIO" (metallic gold shimmer)
-- **Logo chip:** Plaid red + dark plaid pattern
+- **Logo:** Circular medallion photo (`img/logo.jpg`, 512x512) — engraved on dark walnut. Replaced the CSS plaid chip in nav + footer across all pages. Also displayed centered above TIMBER STUDIO in the hero section.
 
 ## File Structure
 ```
@@ -31,6 +31,8 @@ High-end handmade cutting board e-commerce website. Static HTML/CSS/JS, no build
 ├── serve.sh                # python3 -m http.server 8420
 ├── .nojekyll               # GitHub Pages config
 └── img/
+    ├── logo.jpg            # MW Timber Studio medallion (512x512, user-cropped)
+    ├── studio.jpg          # Brand collage (1350x900) — logo, cards, boards
     ├── end-grain.jpg       # ~150KB, 900px tall
     ├── edge-grain.jpg
     ├── serving.jpg
@@ -94,3 +96,36 @@ Live at http://localhost:8420
 - Remote: `https://github.com/deputydoofy420/mw-timber-studio.git`
 - Auth: `gh auth` (keyring)
 - Deploy: `git push` (auto-deploys from main)
+
+## Session Log — Aug 25 2026
+
+### Images added from ~/Downloads
+- **IMG_2602.JPG** → `img/logo.jpg` (user's final crop: `~/Downloads/matts logo.jpg`, 1010x996, cropped to 996x996 square, resized to 512x512, JPEG q82)
+- **IMG_2603.JPG** → `img/studio.jpg` (brand collage, resized to 900px height, JPEG q82)
+
+### Changes made
+1. **Nav + footer logo (all 5 pages):** Replaced CSS `.brand-chip` plaid square with `<img class="brand-logo" src="img/logo.jpg" alt="" width="26" height="26" />` (nav) and width/height 20 (footer). Circular, with gold border + shadow, same hover rotate/scale animation.
+2. **Hero logo:** Added `<img class="hero-logo reveal" data-delay="150" src="img/logo.jpg" alt="" />` centered between the kicker text and the TIMBER/STUDIO h1. 120px on desktop, 90px on mobile (720px breakpoint).
+3. **Brand collage:** Added to "Our Rings" section in `index.html` after the stats div, inside `.rings-copy`. Caption: "One mark, burned into everything that leaves the bench."
+4. **CSS additions (styles.css):**
+   - `.brand-logo` — 26px circle, gold border, shadow, hover transition
+   - `.brand-logo-sm` / `.foot-brand .brand-logo` — 20px for footer
+   - `.hero-logo` — 120px circle, gold border, subtle glow, centered with `margin: 0 auto`
+   - `.brand-photo` + `.brand-photo img` + `.brand-photo figcaption` — collage styling in rings section (rounded, bordered, shadowed, caption in tan letterspaced uppercase)
+   - Mobile: `.hero-logo { width: 90px; height: 90px; }` at 720px breakpoint
+
+### Source images (~/Downloads)
+- `IMG_2597.JPG` — workshop bench with 3 boards
+- `IMG_2598.JPG` — end-grain board on kitchen counter
+- `IMG_2599.JPG` — logo medallion on walnut (alternate take)
+- `IMG_2600.JPG` — business card mockup (Aidan Parsons, Founder)
+- `IMG_2601.JPG` — stack of end-grain cutting boards
+- `IMG_2602.JPG` — logo medallion on walnut (primary source, with white blur on left edge)
+- `IMG_2603.JPG` — brand collage (4 panels: logo, card, engraved board, board stack)
+- `matts logo.jpg` — user's own crop of the logo medallion (used as final `logo.jpg`)
+
+### Notes for next session
+- Matt may want more edits — the collage image (IMG_2603) has unused panels (business card, engraved board close-up) that could go on custom-engraved.html or a new testimonials section
+- IMG_2599 is an alternate logo medallion take (slightly different angle) — available if a variant is needed
+- The `brand-chip` CSS class is still in styles.css (not used in HTML anymore) — can be cleaned up
+- Consider: real checkout backend, testimonials section (both listed in AGENTS.md as "not done yet")
