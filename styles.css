@@ -15,6 +15,13 @@
   --tile: 68px; /* plaid tile size */
   --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
   --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --gold: #d4a632;
+  --gold-bright: #ffe680;
+  --gold-gradient: linear-gradient(135deg,
+    #3d2b06 0%, #6b4e0e 8%, #b8922a 18%, #d4a632 26%,
+    #ffe680 34%, #fff3c4 38%, #ffe680 42%, #d4a632 50%,
+    #8a6914 58%, #b8922a 66%, #ffe680 74%, #fff3c4 78%,
+    #d4a632 86%, #6b4e0e 94%, #3d2b06 100%);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -526,7 +533,12 @@ body.nav-open #nav-toggle i:nth-child(3) { transform: translateY(-7px) rotate(-4
 .stat .num {
   font-family: var(--serif);
   font-size: clamp(44px, 5vw, 64px);
-  color: var(--tan-bright);
+  background: var(--gold-gradient);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: metalShine 3.5s ease-in-out infinite;
   display: block; line-height: 1;
 }
 .stat small {
@@ -608,6 +620,7 @@ footer {
   border-top: 3px solid var(--plaid-red);
   display: flex; align-items: center; justify-content: space-between;
   gap: 14px; flex-wrap: wrap;
+  max-width: 1120px; margin-inline: auto;
   padding: 26px min(4vw, 48px);
   font-size: 13px; color: var(--cream-dim);
 }
@@ -891,7 +904,7 @@ body.cart-open #cart-drawer { transform: translateX(0); }
 /* ============================================================
    PRODUCT PAGES
    ============================================================ */
-.product-page { padding: 130px 0 clamp(80px, 10vw, 120px); position: relative; }
+.product-page { padding: 130px 0 clamp(80px, 10vw, 120px); position: relative; background: rgba(23, 19, 16, 0.88); }
 
 .crumb {
   display: inline-flex; align-items: center; gap: 8px;
@@ -902,7 +915,7 @@ body.cart-open #cart-drawer { transform: translateX(0); }
 .crumb:hover { color: var(--tan-bright); transform: translateX(-4px); }
 
 .product-hero {
-  display: grid; grid-template-columns: minmax(320px, 1fr) minmax(340px, 520px);
+  display: grid; grid-template-columns: 1fr 1fr;
   gap: clamp(36px, 6vw, 80px); align-items: center;
 }
 
@@ -1115,15 +1128,6 @@ body.cart-open #cart-drawer { transform: translateX(0); }
 /* ============================================================
    METALLIC GOLD
    ============================================================ */
-:root {
-  --gold: #d4a632;
-  --gold-bright: #ffe680;
-  --gold-gradient: linear-gradient(135deg,
-    #3d2b06 0%, #6b4e0e 8%, #b8922a 18%, #d4a632 26%,
-    #ffe680 34%, #fff3c4 38%, #ffe680 42%, #d4a632 50%,
-    #8a6914 58%, #b8922a 66%, #ffe680 74%, #fff3c4 78%,
-    #d4a632 86%, #6b4e0e 94%, #3d2b06 100%);
-}
 
 /* text → metallic gradient */
 .hero-kicker,
